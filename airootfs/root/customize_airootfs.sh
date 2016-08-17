@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USER="liveuser"
+OSNAME="SwagArch"
 
 set -e -u
 
@@ -19,12 +20,16 @@ groupadd -r nopasswdlogin
 id -u $USER &>/dev/null || useradd -m $USER -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,autologin,nopasswdlogin,power,wheel"
 passwd -d $USER
 
-echo 'Created User'
+echo 'Live User Created'
 
 
 pushd /home/$USER
 echo "exec startxfce4" >> .xinitrc
 popd
+
+#Name SwagArch
+sed -i.bak 's/Arch Linux/'${OSNAME}'/g' /usr/lib/os-release
+sed -i.bak 's/arch/'${OSNAME,,}'/g' /usr/lib/os-release
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
@@ -34,8 +39,6 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-#Enable Mirrorlist
-sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 
 #set default Browser
 export _BROWSER=firefox
