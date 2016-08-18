@@ -159,3 +159,10 @@ system-config-printer
 
 #ExtraTools
 keepassx2
+
+
+#from Custom-Repo
+gnome-encfs-manager
+gtk-theme-arc-git
+vibrancy-colors
+xfce4-pulseaudio-plugin
