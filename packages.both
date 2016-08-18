@@ -81,6 +81,11 @@ xorg-xinit
 xorg-xkill
 
 
+#Virtualbox Guest Additions
+virtualbox-guest-utils
+virtualbox-guest-dkms
+
+
 #Common-Desktop-Environment
 accountsservice
 ffmpegthumbnailer
