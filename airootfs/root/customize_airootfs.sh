@@ -30,6 +30,12 @@ popd
 #Name SwagArch
 sed -i.bak 's/Arch Linux/'${OSNAME}'/g' /usr/lib/os-release
 sed -i.bak 's/arch/'${OSNAME,,}'/g' /usr/lib/os-release
+sed -i.bak 's/www.archlinux.org/www.archlinux.com/g' /usr/lib/os-release
+sed -i.bak 's/bbs.archlinux.org/bbs.archlinux.com/g' /usr/lib/os-release
+sed -i.bak 's/bugs.archlinux.org/bugs.archlinux.com/g' /usr/lib/os-release
+cp /usr/lib/os-release /etc/os-release
+arch=`uname -m`
+
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
@@ -69,3 +75,5 @@ systemctl enable avahi-daemon.service
 systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
+
+chmod 755 /etc
