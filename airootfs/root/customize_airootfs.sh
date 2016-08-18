@@ -5,7 +5,7 @@ OSNAME="SwagArch"
 
 set -e -u
 
-sed -i 's/#\(de_DE\.UTF-8\)/\1/' /etc/locale.gen
+sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
