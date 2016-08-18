@@ -106,7 +106,7 @@ mesa-vdpau
 
 #XFCE4-Desktop-Environment
 cdrkit
-evince
+atril-gtk3
 file-roller
 gamin
 gnome-calculator
@@ -137,6 +137,7 @@ xscreensaver
 firefox
 gufw
 plank
+alacarte
 
 
 #Icons and Cursors
