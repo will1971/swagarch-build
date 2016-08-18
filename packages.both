@@ -126,15 +126,16 @@ xfce4-battery-plugin
 xfce4-datetime-plugin
 xfce4-notifyd
 xfce4-screenshooter
+xfce4-whiskermenu-plugin
 mate-system-monitor
 xscreensaver
 firefox
 gufw
+plank
 
 
 #Icons and Cursors
 adwaita-icon-theme
-
 
 
 #Printer-Support
@@ -142,12 +143,6 @@ cups
 cups-pk-helper
 gsfonts
 system-config-printer
-
-
-#Grub2-Bootmananger
-grub
-os-prober
-
 
 #ExtraTools
 keepassx2

@@ -43,16 +43,12 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 #set default Browser
 export _BROWSER=firefox
 echo "BROWSER=/usr/bin/${_BROWSER}" >> /etc/environment
-echo "BROWSER=/usr/bin/${_BROWSER}" >> /etc/skel/.bashrc
 echo "BROWSER=/usr/bin/${_BROWSER}" >> /etc/profile
-
 
 #Set Nano Editor
 export _EDITOR=nano
 echo "EDITOR=${_EDITOR}" >> /etc/environment
-echo "EDITOR=${_EDITOR}" >> /etc/skel/.bashrc
 echo "EDITOR=${_EDITOR}" >> /etc/profile
-
 
 #Enable Sudo
 chmod 750 /etc/sudoers.d
