@@ -66,6 +66,11 @@ echo "Enabled Sudo"
 #Setup Pacman
 pacman-key --init archlinux
 pacman-key --populate archlinux
+pacman-key --refresh-keys
+
+#Add my new GPG Key
+pacman-key -r 0D43EFF9AF9BB4FFAEA48A454CD3DCB3EC5D6021
+
 
 
 #Enable Services
