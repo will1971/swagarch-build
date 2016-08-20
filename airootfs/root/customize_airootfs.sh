@@ -62,7 +62,6 @@ chmod 440 /etc/sudoers.d/g_wheel
 chown -R root /etc/sudoers.d
 echo "Enabled Sudo"
 
-
 #Setup Pacman
 pacman-key --init archlinux swagarch
 pacman-key --populate archlinux swagarch
@@ -77,6 +76,6 @@ systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
 
 #Set Plank Default Theme
-dbus-launch --exit-with-session gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme Arc
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme Arc
 
 chmod 755 /etc

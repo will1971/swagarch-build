@@ -4,9 +4,11 @@ base-devel
 linux-headers
 arch-install-scripts
 
+#GPG Keys
+archlinux-keyring
+swagarch-keyring
 
 #common
-archlinux-keyring
 pacman-mirrorlist
 acpid
 bash-completion
@@ -162,7 +164,6 @@ keepassx2
 
 
 #from Custom-Repo
-swagarch-keyring
 yaourt
 pamac-aur
 arc-firefox-theme-git

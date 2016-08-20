@@ -1,5 +1,9 @@
 #!/bin/bash
 
+pacman-key --init
+pacman-key --populate
+pacman-key --populate swagarch
+
 set -e -u
 
 iso_name=swagarch
