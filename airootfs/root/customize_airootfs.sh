@@ -71,8 +71,6 @@ pacman-key --refresh-keys
 #Add my new GPG Key
 pacman-key -r 0D43EFF9AF9BB4FFAEA48A454CD3DCB3EC5D6021
 
-
-
 #Enable Services
 systemctl enable pacman-init.service lightdm.service choose-mirror.service dhcpcd.service
 systemctl enable org.cups.cupsd.service
@@ -80,5 +78,8 @@ systemctl enable avahi-daemon.service
 systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
+
+#Set Plank Default Theme
+dbus-launch --exit-with-session gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme Arc
 
 chmod 755 /etc

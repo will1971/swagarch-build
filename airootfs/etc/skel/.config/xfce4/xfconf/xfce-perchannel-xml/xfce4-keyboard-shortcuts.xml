@@ -35,6 +35,8 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="F12" type="string" value="xfce4-terminal --drop-down"/>
+      <property name="Print" type="string" value="xfce4-screenshooter -f"/>
+      <property name="&lt;Primary&gt;Print" type="string" value="xfce4-screenshooter -w"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

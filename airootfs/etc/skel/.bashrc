@@ -58,4 +58,4 @@ function _prompt_command() {
 export PROMPT_COMMAND=_prompt_command
 
 
-screenfetch
+screenfetch -D "Arch Linux"

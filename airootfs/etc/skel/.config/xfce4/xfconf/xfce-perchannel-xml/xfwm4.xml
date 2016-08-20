@@ -78,8 +78,8 @@
     <property name="wrap_workspaces" type="bool" value="false"/>
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="workspace_names" type="array">
-      <value type="string" value="Arbeitsfläche 1"/>
-      <value type="string" value="Arbeitsfläche 2"/>
+      <value type="string" value="workspace1"/>
+      <value type="string" value="workspace2"/>
     </property>
   </property>
 </channel>
