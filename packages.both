@@ -162,6 +162,7 @@ keepassx2
 
 
 #from Custom-Repo
+swagarch-keyring
 yaourt
 pamac-aur
 arc-firefox-theme-git
