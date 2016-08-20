@@ -162,7 +162,15 @@ keepassx2
 
 
 #from Custom-Repo
+yaourt
+pamac-aur
+arc-firefox-theme-git
+plank-theme-arc
 gnome-encfs-manager
 gtk-theme-arc-git
+mac-os-lion-cursors
 vibrancy-colors
 xfce4-pulseaudio-plugin
+
+
+
