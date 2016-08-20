@@ -70,6 +70,8 @@ pacman-key --refresh-keys
 
 #Add my new GPG Key
 pacman-key -r 0D43EFF9AF9BB4FFAEA48A454CD3DCB3EC5D6021
+pacman-key -f 0D43EFF9AF9BB4FFAEA48A454CD3DCB3EC5D6021
+pacman-key --lsign-key 0D43EFF9AF9BB4FFAEA48A454CD3DCB3EC5D6021
 
 #Enable Services
 systemctl enable pacman-init.service lightdm.service choose-mirror.service dhcpcd.service
