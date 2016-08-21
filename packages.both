@@ -9,6 +9,7 @@ archlinux-keyring
 swagarch-keyring
 
 #common
+breeze
 pacman-mirrorlist
 acpid
 bash-completion
