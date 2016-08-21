@@ -79,6 +79,10 @@ systemctl set-default graphical.target
 rm -rf /usr/share/plank/themes/Default
 ln -s /usr/share/plank/themes/Arc/ /usr/share/plank/themes/Default
 
+#Set Default Cursor Theme
+rm -rf /usr/share/icons/Default
+ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
+
 #Set Pluma Settings
 gsettings set org.mate.pluma auto-indent true
 gsettings set org.mate.pluma bracket-matching true
