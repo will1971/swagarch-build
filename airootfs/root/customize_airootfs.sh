@@ -76,6 +76,8 @@ systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
 
 #Set Plank Default Theme
-gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme Arc
+rm -rf /usr/share/plank/themes/Default
+ln -s /usr/share/plank/themes/Arc/ /usr/share/plank/themes/Default
+
 
 chmod 755 /etc
