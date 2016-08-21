@@ -1,2 +1,3 @@
 [PlankDockItemPreferences]
-Launcher=file:///usr/share/applications/keepassx2.desktop
+Launcher=file:///etc/skel/.local/share/applications/keepassx2.desktop
+

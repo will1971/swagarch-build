@@ -75,24 +75,8 @@ systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
 
-#Set Plank Default Theme
-rm -rf /usr/share/plank/themes/Default
-ln -s /usr/share/plank/themes/Arc/ /usr/share/plank/themes/Default
-
 #Set Default Cursor Theme
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
-
-#Set Pluma Settings
-gsettings set org.mate.pluma auto-indent true
-gsettings set org.mate.pluma bracket-matching true
-gsettings set org.mate.pluma color-scheme 'oblivion'
-gsettings set org.mate.pluma display-line-numbers true
-gsettings set org.mate.pluma display-right-margin true
-gsettings set org.mate.pluma editor-font 'Droid Sans Mono 12'
-gsettings set org.mate.pluma insert-spaces true
-gsettings set org.mate.pluma right-margin-position 80
-gsettings set org.mate.pluma tabs-size 4
-gsettings set org.mate.pluma use-default-font true
 
 chmod 755 /etc
