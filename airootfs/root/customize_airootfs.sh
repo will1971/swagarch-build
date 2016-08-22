@@ -62,6 +62,11 @@ chmod 440 /etc/sudoers.d/g_wheel
 chown -R root /etc/sudoers.d
 echo "Enabled Sudo"
 
+#Enable Calamares Autostart
+mkdir -p /home/liveuser/.config/autostart
+ln -fs /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart/calamares.desktop
+chmod +x /home/liveuser/.config/autostart/calamares.desktop
+
 #Setup Pacman
 pacman-key --init archlinux swagarch
 pacman-key --populate archlinux swagarch

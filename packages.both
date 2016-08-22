@@ -165,7 +165,7 @@ system-config-printer
 
 #ExtraTools
 keepassx2
-
+calamares
 
 #from Custom-Repo
 yaourt
