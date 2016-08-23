@@ -12,7 +12,7 @@ iso_version=$(date +%Y.%m.%d)
 install_dir=arch
 work_dir=work
 out_dir=out
-gpg_key=
+gpg_key=EC5D6021
 
 arch=$(uname -m)
 verbose=""
