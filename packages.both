@@ -1,17 +1,28 @@
 #base-system
 base
 base-devel
+
+#kernel
 linux-headers
-arch-install-scripts
+linux-firmware
+
+#Grub Bootloader
+grub
+os-prober
 
 #GPG Keys
 archlinux-keyring
 swagarch-keyring
 
+#Audio
+alsa-utils
+lib32-alsa-plugins
+pulseaudio
+pulseaudio-alsa
+
 #common
-breeze
 pacman-mirrorlist
-acpid
+tlp
 bash-completion
 bind-tools
 dosfstools
@@ -19,16 +30,16 @@ haveged
 ntfs-3g
 btrfs-progs
 openssh
+efitools
 pkgfile
 sudo
 usb_modeswitch
+fuse-exfat
 wget
 upower
 encfs
 git
-zsh
 screenfetch
-
 
 #Firmware
 b43-fwcutter
@@ -36,26 +47,12 @@ zd1211-firmware
 ipw2100-fw
 ipw2200-fw
 
-
-#Audio
-alsa-utils
-pulseaudio
-pulseaudio-alsa
-pavucontrol
-
-
 #Archive-Tools
-gzip
 tar
 unzip
+gzip
 unrar
-cabextract
 xz
-zip
-unace
-sharutils
-bzip2
-
 
 #Network
 crda
@@ -65,14 +62,12 @@ whois
 wireless_tools
 wpa_actiond
 
-
 #Fonts
 ttf-dejavu
 ttf-liberation
 ttf-linux-libertine
 ttf-bitstream-vera
 ttf-droid
-
 
 #X.Org-Server
 xf86-input-synaptics
@@ -83,38 +78,46 @@ xf86-video-nouveau
 xf86-video-openchrome
 xf86-video-ati
 xf86-video-vmware
-xorg-apps
 xorg-fonts
 xorg-server
 xorg-server-utils
 xorg-xinit
 xorg-xkill
+mesa
+mesa-libgl
+mesa-vdpau
+lib32-mesa-libgl
 
-
-#Common-Desktop-Environment
-accountsservice
-ffmpegthumbnailer
-gst-libav
+#video and audio codec
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
+x264
 gstreamer-vaapi
 gstreamer0.10-plugins
 libdvdcss
+gst-libav
+
+#Common-Desktop-Environment
+accountsservice
+ffmpegthumbnailer
+pavucontrol
+breeze
+hunspell
+gucharmap
+
+#Lightdm Login Mananger
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
-mesa
-mesa-vdpau
-
 
 #Virtualbox Guest Additions
 virtualbox-guest-modules-arch
 virtualbox-guest-utils
 
-
 #XFCE4-Desktop-Environment
+gnome-icon-theme
 cdrkit
 atril-gtk3
 file-roller
@@ -152,20 +155,15 @@ gufw
 plank
 alacarte
 
-
-#Icons and Cursors
-adwaita-icon-theme
-
-
 #Printer-Support
 cups
 cups-pk-helper
 gsfonts
+splix
 system-config-printer
 
 #ExtraTools
 keepassx2
-calamares
 
 #from Custom-Repo
 yaourt
@@ -177,6 +175,7 @@ gtk-theme-arc-git
 mac-os-lion-cursors
 vibrancy-colors
 xfce4-pulseaudio-plugin
+calamares
 
 
 
