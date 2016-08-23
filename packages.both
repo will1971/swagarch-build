@@ -22,6 +22,7 @@ pulseaudio-alsa
 
 #common
 pacman-mirrorlist
+mkinitcpio-openswap
 tlp
 bash-completion
 bind-tools
