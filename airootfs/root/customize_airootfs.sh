@@ -64,8 +64,9 @@ echo "Enabled Sudo"
 
 #Enable Calamares Autostart
 mkdir -p /home/liveuser/.config/autostart
-ln -fs /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart/calamares.desktop
-chmod +x /home/liveuser/.config/autostart/calamares.desktop
+ln -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart/calamares.desktop
+chmod +rx /home/liveuser/.config/autostart/calamares.desktop
+chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
 #Setup Pacman
 pacman-key --init archlinux swagarch
