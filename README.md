@@ -8,7 +8,7 @@ This is the 64-bit source for the SwagArch iso.
 
 # What is SwagArch GNU/Linux ?
 - SwagArch is a beautiful easy To use ArchLinux Distribution
-- SwagArch is completely compatible with Arch 
+- SwagArch is completely compatible with Arch Linux
 - Created with archiso
 
 # The Calamares Installer from the live System (easy to use!)
