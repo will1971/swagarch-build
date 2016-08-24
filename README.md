@@ -2,12 +2,12 @@
 This is the 64-bit source for the SwagArch iso.
 
 # Test the Alpha Version of SwagArch GNU/Linux
->Link: 
+>Download Link: http://bit.ly/2c7PDKg 
 
 >MD5sum: 06f17e9b2528669b731a2ff5fc5bf71b
 
 # What is SwagArch GNU/Linux ?
-- SwagArch is a beautiful easy To use ArchLinux Distribution
+- SwagArch is a beautiful and easy to use ArchLinux Distribution
 - SwagArch is completely compatible with Arch Linux
 - Created with archiso
 
