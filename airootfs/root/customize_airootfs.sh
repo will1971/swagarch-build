@@ -14,10 +14,7 @@ usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 chmod 700 /root
 
-groupadd -r autologin
-groupadd -r nopasswdlogin
-
-id -u $USER &>/dev/null || useradd -m $USER -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,autologin,nopasswdlogin,power,wheel"
+id -u $USER &>/dev/null || useradd -m "liveuser" -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel"
 passwd -d $USER
 
 echo 'Live User Created'
@@ -37,14 +34,8 @@ cp /usr/lib/os-release /etc/os-release
 arch=`uname -m`
 
 
-sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
-
-sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
-sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
-sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
-
 
 #set default Browser
 export _BROWSER=firefox
@@ -85,4 +76,7 @@ systemctl set-default graphical.target
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
 
-chmod 755 /etc
+#Setup Su
+sed -i /etc/pam.d/su -e 's/auth      sufficient  pam_wheel.so trust use_uid/#auth        sufficient  pam_wheel.so trust use_uid/'
+
+chmod -R 755 /etc/sudoers.d
