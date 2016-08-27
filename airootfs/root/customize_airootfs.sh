@@ -14,7 +14,10 @@ usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 chmod 700 /root
 
-id -u $USER &>/dev/null || useradd -m "liveuser" -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel"
+groupadd -r autologin
+groupadd -r nopasswdlogin
+
+id -u $USER &>/dev/null || useradd -m $USER -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,autologin,nopasswdlogin,power,wheel"
 passwd -d $USER
 
 echo 'Live User Created'
@@ -60,14 +63,16 @@ chmod +rx /home/liveuser/.config/autostart/calamares.desktop
 chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
 #Setup Pacman
-pacman-key --init archlinux swagarch
-pacman-key --populate archlinux swagarch
-pacman-key --refresh-keys
+pacman-key --init archlinux
+pacman-key --populate archlinux
+pacman-key --init swagarch
+pacman-key --populate swagarch
 
 #Enable Services
 systemctl enable pacman-init.service lightdm.service choose-mirror.service dhcpcd.service
 systemctl enable org.cups.cupsd.service
 systemctl enable avahi-daemon.service
+systemctl enable haveged
 systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
@@ -76,7 +81,4 @@ systemctl set-default graphical.target
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
 
-#Setup Su
-sed -i /etc/pam.d/su -e 's/auth      sufficient  pam_wheel.so trust use_uid/#auth        sufficient  pam_wheel.so trust use_uid/'
-
-chmod -R 755 /etc/sudoers.d
+chmod 755 /etc
