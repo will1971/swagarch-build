@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf /var/cache/pacman/pkg/*
+
 pacman-key --init
 pacman-key --populate
 pacman-key --populate swagarch
