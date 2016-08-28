@@ -81,4 +81,11 @@ systemctl set-default graphical.target
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
 
+# sys updates, cleanups, etc.
+su -c 'pacman -Syyu --noconfirm' root
+su -c 'pacman-optimize' root
+su -c 'updatedb' root
+su -c 'pacman-db-upgrade' root
+su -c 'sync' root
+
 chmod 755 /etc

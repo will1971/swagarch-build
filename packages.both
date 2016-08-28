@@ -37,6 +37,7 @@ sudo
 usb_modeswitch
 fuse-exfat
 wget
+mlocate
 upower
 encfs
 git
