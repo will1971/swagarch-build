@@ -5,27 +5,41 @@ OSNAME="SwagArch"
 
 set -e -u
 
+# Set locales
 sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 
+# Timezone
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+
+# Set clock to UTC
+hwclock --systohc --utc
+
+# Locale
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LC_COLLATE=C" >> /etc/locale.conf
+
+# Vconsole
+echo "KEYMAP=us" > /etc/vconsole.conf
+echo "FONT=" >> /etc/vconsole.conf
+
+# Hostname
+echo "swagarch" > /etc/hostname
+
 
 usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 chmod 700 /root
 
+# add groups autologin and nopasswdlogin (for lightdm autologin)
 groupadd -r autologin
 groupadd -r nopasswdlogin
 
+# add liveuser
 id -u $USER &>/dev/null || useradd -m $USER -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,autologin,nopasswdlogin,power,wheel"
 passwd -d $USER
 
 echo 'Live User Created'
-
-
-pushd /home/$USER
-echo "exec startxfce4" >> .xinitrc
-popd
 
 #Name SwagArch
 sed -i.bak 's/Arch Linux/'${OSNAME}'/g' /usr/lib/os-release
@@ -63,10 +77,18 @@ chmod +rx /home/liveuser/.config/autostart/calamares.desktop
 chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
 #Setup Pacman
-pacman-key --init archlinux
-pacman-key --populate archlinux
-pacman-key --init swagarch
-pacman-key --populate swagarch
+su -c "pacman-key --init archlinux"
+su -c "pacman-key --populate archlinux"
+
+su -c "pacman-key --init swagarch"
+su -c "pacman-key --populate swagarch"
+
+# sys updates, cleanups, etc.
+su -c 'pacman -Syyu --noconfirm' root
+su -c 'pacman-optimize' root
+su -c 'updatedb' root
+su -c 'pacman-db-upgrade' root
+su -c 'sync' root
 
 #Enable Services
 systemctl enable pacman-init.service lightdm.service choose-mirror.service dhcpcd.service
@@ -80,12 +102,5 @@ systemctl set-default graphical.target
 #Set Default Cursor Theme
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
-
-# sys updates, cleanups, etc.
-su -c 'pacman -Syyu --noconfirm' root
-su -c 'pacman-optimize' root
-su -c 'updatedb' root
-su -c 'pacman-db-upgrade' root
-su -c 'sync' root
 
 chmod 755 /etc
