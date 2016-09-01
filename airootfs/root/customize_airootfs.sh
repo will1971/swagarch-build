@@ -85,6 +85,12 @@ systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
 
+#Setup Pacman
+pacman-key --init archlinux
+pacman-key --populate archlinux
+pacman-key --init swagarch
+pacman-key --populate swagarch
+
 #Set Default Cursor Theme
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
