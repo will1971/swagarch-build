@@ -76,13 +76,6 @@ ln -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart
 chmod +rx /home/liveuser/.config/autostart/calamares.desktop
 chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
-#Setup Pacman
-su -c "pacman-key --init archlinux"
-su -c "pacman-key --populate archlinux"
-
-su -c "pacman-key --init swagarch"
-su -c "pacman-key --populate swagarch"
-
 # sys updates, cleanups, etc.
 su -c 'pacman -Syyu --noconfirm' root
 su -c 'pacman-optimize' root
