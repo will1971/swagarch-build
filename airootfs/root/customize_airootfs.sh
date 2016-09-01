@@ -76,13 +76,6 @@ ln -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart
 chmod +rx /home/liveuser/.config/autostart/calamares.desktop
 chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
-# sys updates, cleanups, etc.
-su -c 'pacman -Syyu --noconfirm' root
-su -c 'pacman-optimize' root
-su -c 'updatedb' root
-su -c 'pacman-db-upgrade' root
-su -c 'sync' root
-
 #Enable Services
 systemctl enable pacman-init.service lightdm.service choose-mirror.service dhcpcd.service
 systemctl enable org.cups.cupsd.service
