@@ -8,8 +8,10 @@ After=etc-pacman.d-gnupg.mount
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/pacman-key --init
+ExecStart=/usr/bin/pacman-key --init archlinux
 ExecStart=/usr/bin/pacman-key --populate archlinux
+ExecStart=/usr/bin/pacman-key --init swagarch
+ExecStart=/usr/bin/pacman-key --populate swagarch
 
 [Install]
 WantedBy=multi-user.target
