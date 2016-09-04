@@ -30,7 +30,6 @@ dosfstools
 haveged
 ntfs-3g
 btrfs-progs
-openssh
 efitools
 pkgfile
 sudo
