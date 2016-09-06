@@ -168,7 +168,7 @@ keepassx2
 
 #from Custom-Repo
 yaourt
-pamac-pacaur
+pamac-aur
 arc-firefox-theme-git
 plank-theme-arc
 gnome-encfs-manager
