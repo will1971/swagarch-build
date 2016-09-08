@@ -176,8 +176,12 @@ gtk-theme-arc-git
 mac-os-lion-cursors
 vibrancy-colors
 xfce4-pulseaudio-plugin
-ckbcomp
-calamares
 swagarch-wallpapers
 swagarch-base-skel
+
+#calamares installer
+python-urllib3
+ckbcomp
+calamares
+
 
