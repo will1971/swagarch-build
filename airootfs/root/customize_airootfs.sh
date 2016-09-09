@@ -95,4 +95,10 @@ pacman-key --populate swagarch
 rm -rf /usr/share/icons/Default
 ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
 
+#Wifi not available with networkmanager (BugFix)
+#https://github.com/SwagArch/swagarch-build/issues/8
+su -c 'echo "" >> /etc/NetworkManager/NetworkManager.conf'
+su -c 'echo "[device]" >> /etc/NetworkManager/NetworkManager.conf'
+su -c 'echo "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf'
+
 chmod 755 /etc
