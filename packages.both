@@ -107,6 +107,7 @@ pavucontrol
 breeze
 hunspell
 gucharmap
+gvfs-smb
 
 #Lightdm Login Mananger
 lightdm
