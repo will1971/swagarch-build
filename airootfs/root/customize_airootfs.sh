@@ -77,7 +77,7 @@ chmod +rx /home/liveuser/.config/autostart/calamares.desktop
 chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
 #Enable Services
-systemctl enable pacman-init.service lightdm.service choose-mirror.service dhcpcd.service
+systemctl enable pacman-init.service lightdm.service choose-mirror.service
 systemctl enable org.cups.cupsd.service
 systemctl enable avahi-daemon.service
 systemctl enable haveged
