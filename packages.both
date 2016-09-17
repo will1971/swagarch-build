@@ -118,7 +118,7 @@ virtualbox-guest-modules-arch
 virtualbox-guest-utils
 
 #XFCE4-Desktop-Environment
-gnome-icon-theme
+adwaita-icon-theme
 cdrkit
 atril-gtk3
 file-roller
