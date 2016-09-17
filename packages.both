@@ -41,6 +41,7 @@ upower
 encfs
 git
 screenfetch
+qt5-styleplugins
 
 #Firmware
 b43-fwcutter
