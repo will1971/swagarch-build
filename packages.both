@@ -43,6 +43,7 @@ git
 screenfetch
 qt5ct
 qt5-styleplugins
+qgnomeplatform-git
 
 #Firmware
 b43-fwcutter
