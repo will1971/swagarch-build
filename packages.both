@@ -142,6 +142,7 @@ gimp-plugin-gmic
 polkit-gnome
 ristretto
 thunar-archive-plugin
+thunar-media-tags-plugin
 thunar-volman
 tumbler
 xdg-user-dirs-gtk
