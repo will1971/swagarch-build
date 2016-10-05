@@ -101,6 +101,10 @@ su -c 'echo "" >> /etc/NetworkManager/NetworkManager.conf'
 su -c 'echo "[device]" >> /etc/NetworkManager/NetworkManager.conf'
 su -c 'echo "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf'
 
+#add missing /media directory
+mkdir -p /media
+chmod 755 -R /media
+
 #fix permissions
 chown root:root /usr
 chmod 755 /etc
