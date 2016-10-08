@@ -110,6 +110,7 @@ pavucontrol
 hunspell
 gucharmap
 gvfs-smb
+gparted
 
 #Lightdm Login Mananger
 lightdm
@@ -158,6 +159,7 @@ firefox
 gufw
 plank
 alacarte
+swagarch-system-tools
 
 #Printer-Support
 cups
