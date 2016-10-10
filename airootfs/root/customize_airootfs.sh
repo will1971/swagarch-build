@@ -81,6 +81,7 @@ chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 systemctl enable pacman-init.service lightdm.service choose-mirror.service
 systemctl enable org.cups.cupsd.service
 systemctl enable avahi-daemon.service
+systemctl enable vboxservice.service
 systemctl enable haveged
 systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
