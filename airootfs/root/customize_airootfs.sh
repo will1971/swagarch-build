@@ -68,6 +68,7 @@ echo "EDITOR=${_EDITOR}" >> /etc/profile
 chmod 750 /etc/sudoers.d
 chmod 440 /etc/sudoers.d/g_wheel
 chown -R root /etc/sudoers.d
+chmod -R 755 /etc/sudoers.d
 echo "Enabled Sudo"
 
 #Enable Calamares Autostart
