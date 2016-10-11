@@ -124,7 +124,7 @@ virtualbox-guest-utils
 #XFCE4-Desktop-Environment
 adwaita-icon-theme
 cdrkit
-atril-gtk3
+atril
 file-roller
 gamin
 gnome-calculator
@@ -132,7 +132,7 @@ gnome-disk-utility
 gnome-keyring
 gvfs-mtp
 light-locker
-pluma-gtk3
+pluma
 network-manager-applet
 networkmanager-openvpn
 networkmanager-pptp
