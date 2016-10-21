@@ -4,6 +4,7 @@ USER="liveuser"
 OSNAME="SwagArch"
 
 set -e -u
+umask 022
 
 # Set locales
 sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
