@@ -184,6 +184,7 @@ vibrancy-colors
 xfce4-pulseaudio-plugin
 swagarch-wallpapers
 swagarch-base-skel
+fsearch-git
 
 #calamares installer
 python-urllib3
