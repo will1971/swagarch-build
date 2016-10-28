@@ -37,7 +37,7 @@ groupadd -r autologin
 groupadd -r nopasswdlogin
 
 # add liveuser
-id -u $USER &>/dev/null || useradd -m $USER -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,autologin,nopasswdlogin,power,wheel"
+id -u $USER &>/dev/null || useradd -m $USER -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,autologin,nopasswdlogin,power,sambashare,wheel"
 passwd -d $USER
 
 echo 'Live User Created'
