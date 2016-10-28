@@ -111,6 +111,7 @@ hunspell
 gucharmap
 gvfs-smb
 gparted
+samba
 
 #Lightdm Login Mananger
 lightdm
@@ -185,10 +186,10 @@ xfce4-pulseaudio-plugin
 swagarch-wallpapers
 swagarch-base-skel
 fsearch-git
+thunar-shares-plugin-swagarch
 
 #calamares installer
 python-urllib3
 ckbcomp
 calamares
-
 
