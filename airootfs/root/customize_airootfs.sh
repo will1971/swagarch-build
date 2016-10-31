@@ -78,15 +78,25 @@ ln -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart
 chmod +rx /home/liveuser/.config/autostart/calamares.desktop
 chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 
+
 #Enable Services
 systemctl enable pacman-init.service lightdm.service choose-mirror.service
 systemctl enable org.cups.cupsd.service
 systemctl enable avahi-daemon.service
 systemctl enable vboxservice.service
 systemctl enable haveged
+systemctl enable systemd-networkd.service
+systemctl enable systemd-resolved.service
 systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
+
+#create network for systemd-networkd
+mkdir /etc/systemd/network
+
+#link to systemd-networkd resolv.conf
+rm -rf /etc/resolv.conf
+ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 #Setup Pacman
 pacman-key --init archlinux
