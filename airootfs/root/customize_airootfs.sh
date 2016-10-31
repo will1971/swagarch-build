@@ -91,9 +91,6 @@ systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
 
-#create network for systemd-networkd
-mkdir /etc/systemd/network
-
 #link to systemd-networkd resolv.conf
 rm -rf /etc/resolv.conf
 ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
