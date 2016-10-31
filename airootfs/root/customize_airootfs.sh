@@ -91,9 +91,12 @@ systemctl -fq enable NetworkManager
 systemctl mask systemd-rfkill@.service
 systemctl set-default graphical.target
 
+# delete obsolete network packages
+pacman -Rns --noconfirm openresolv netctl dhcpcd
+
 #link to systemd-networkd resolv.conf
-rm -rf /etc/resolv.conf
-ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+umount /etc/resolv.conf
+ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 #Setup Pacman
 pacman-key --init archlinux
