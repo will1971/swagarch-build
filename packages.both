@@ -124,6 +124,7 @@ virtualbox-guest-utils
 
 #XFCE4-Desktop-Environment
 adwaita-icon-theme
+arc-gtk-theme
 cdrkit
 atril
 file-roller
@@ -179,7 +180,6 @@ light-locker-settings
 arc-firefox-theme-git
 plank-theme-arc
 gnome-encfs-manager
-gtk-theme-arc-git
 mac-os-lion-cursors
 vibrancy-colors
 xfce4-pulseaudio-plugin
