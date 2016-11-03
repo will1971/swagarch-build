@@ -94,9 +94,6 @@ systemctl set-default graphical.target
 # delete obsolete network packages
 pacman -Rns --noconfirm openresolv netctl dhcpcd
 
-# delete not used packages
-pacman -Rns --noconfirm mate-desktop
-
 #link to systemd-networkd resolv.conf
 umount /etc/resolv.conf
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
