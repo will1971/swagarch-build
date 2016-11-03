@@ -94,15 +94,17 @@ systemctl set-default graphical.target
 # delete obsolete network packages
 pacman -Rns --noconfirm openresolv netctl dhcpcd
 
-#link to systemd-networkd resolv.conf
-rm -rf /etc/resolv.conf
-ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+# populate trust information (ssl)
+trust extract-compat
 
 #Setup Pacman
 pacman-key --init archlinux
 pacman-key --populate archlinux
 pacman-key --init swagarch
 pacman-key --populate swagarch
+
+# update package information
+pacman -Syy
 
 #Set Default Cursor Theme
 rm -rf /usr/share/icons/Default
@@ -121,3 +123,8 @@ chmod 755 -R /media
 #fix permissions
 chown root:root /usr
 chmod 755 /etc
+
+# use the resolv.conf from systemd-resolved.service
+umount -f /etc/resolv.conf
+rm /etc/resolv.conf
+ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
