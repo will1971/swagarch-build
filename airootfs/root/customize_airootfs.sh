@@ -95,7 +95,7 @@ systemctl set-default graphical.target
 pacman -Rns --noconfirm openresolv netctl dhcpcd
 
 #link to systemd-networkd resolv.conf
-umount /etc/resolv.conf
+rm -rf /etc/resolv.conf
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 #Setup Pacman
