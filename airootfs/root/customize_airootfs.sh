@@ -28,7 +28,7 @@ echo "FONT=" >> /etc/vconsole.conf
 echo "swagarch" > /etc/hostname
 
 
-usermod -s /usr/bin/zsh root
+usermod -s /usr/bin/bash root
 cp -aT /etc/skel/ /root/
 chmod 700 /root
 
@@ -94,14 +94,14 @@ systemctl set-default graphical.target
 # delete obsolete network packages
 pacman -Rns --noconfirm openresolv netctl dhcpcd
 
-# populate trust information (ssl)
-trust extract-compat
-
 #Setup Pacman
 pacman-key --init archlinux
 pacman-key --populate archlinux
 pacman-key --init swagarch
 pacman-key --populate swagarch
+
+# populate trust information (ssl)
+trust extract-compat
 
 # update package information
 pacman -Syy
@@ -123,8 +123,3 @@ chmod 755 -R /media
 #fix permissions
 chown root:root /usr
 chmod 755 /etc
-
-# use the resolv.conf from systemd-resolved.service
-umount -f /etc/resolv.conf
-rm /etc/resolv.conf
-ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
