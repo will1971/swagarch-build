@@ -29,7 +29,7 @@ echo "swagarch" > /etc/hostname
 
 
 usermod -s /usr/bin/bash root
-pacman -Rns zsh #remove zsh
+pacman -Rns --noconfirm zsh #remove zsh
 echo 'export PROMPT_COMMAND=""' >> /root/.bashrc
 chmod 700 /root
 
