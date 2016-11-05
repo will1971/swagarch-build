@@ -76,7 +76,7 @@ function enableSudoFunc() {
 function enableCalamaresAutostartFunc() {
     #Enable Calamares Autostart
     mkdir -p /home/liveuser/.config/autostart
-l   n -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart/calamares.desktop
+    ln -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart/calamares.desktop
     chmod +rx /home/liveuser/.config/autostart/calamares.desktop
     chown liveuser /home/liveuser/.config/autostart/calamares.desktop
 }
