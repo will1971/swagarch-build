@@ -133,7 +133,7 @@ function editOrCreateConfigFilesFunc () {
     sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
 }
 
-function renameOSFunc {
+function renameOSFunc() {
     #Name SwagArch
     sed -i.bak 's/Arch Linux/'${OSNAME}'/g' /usr/lib/os-release
     sed -i.bak 's/arch/'${OSNAME,,}'/g' /usr/lib/os-release
@@ -144,6 +144,20 @@ function renameOSFunc {
     arch=`uname -m`
 }
 
+function doNotDisturbTheLiveUserFunc() {
+    #delete old config file
+    pathToPerchannel="/home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml"
+    rm -rf $pathToPerchannel
+    #create a new file
+    touch $pathToPerchannel
+    echo '<?xml version="1.0" encoding="UTF-8"?>' > $pathToPerchannel
+    echo '' > $pathToPerchannel
+    echo '<channel name="xfce4-notifyd" version="1.0">' > $pathToPerchannel
+    echo '  <property name="notify-location" type="uint" value="3"/>' > $pathToPerchannel
+    echo '  <property name="do-not-disturb" type="bool" value="true"/>' > $pathToPerchannel
+    echo '</channel>' > $pathToPerchannel
+}
+
 
 initFunc
 initkeysFunc
@@ -152,6 +166,7 @@ setTimeZoneAndClockFunc
 editOrCreateConfigFilesFunc
 configRootUserFunc
 createLiveUserFunc
+doNotDisturbTheLiveUserFunc
 renameOSFunc
 setDefaultsFunc
 enableSudoFunc
