@@ -155,12 +155,12 @@ function doNotDisturbTheLiveUserFunc() {
     rm -rf $pathToPerchannel
     #create a new file
     touch $pathToPerchannel
-    echo '<?xml version="1.0" encoding="UTF-8"?>' > $pathToPerchannel
-    echo '' > $pathToPerchannel
-    echo '<channel name="xfce4-notifyd" version="1.0">' > $pathToPerchannel
-    echo '  <property name="notify-location" type="uint" value="3"/>' > $pathToPerchannel
-    echo '  <property name="do-not-disturb" type="bool" value="true"/>' > $pathToPerchannel
-    echo '</channel>' > $pathToPerchannel
+    echo '<?xml version="1.0" encoding="UTF-8"?>' >> $pathToPerchannel
+    echo '' >> $pathToPerchannel
+    echo '<channel name="xfce4-notifyd" version="1.0">' >> $pathToPerchannel
+    echo '  <property name="notify-location" type="uint" value="3"/>' >> $pathToPerchannel
+    echo '  <property name="do-not-disturb" type="bool" value="true"/>' >> $pathToPerchannel
+    echo '</channel>' >> $pathToPerchannel
 }
 
 
