@@ -135,11 +135,16 @@ function editOrCreateConfigFilesFunc () {
 
 function renameOSFunc() {
     #Name SwagArch
-    sed -i.bak 's/Arch Linux/'${OSNAME}'/g' /usr/lib/os-release
-    sed -i.bak 's/arch/'${OSNAME,,}'/g' /usr/lib/os-release
-    sed -i.bak 's/www.archlinux.org/www.archlinux.com/g' /usr/lib/os-release
-    sed -i.bak 's/bbs.archlinux.org/bbs.archlinux.com/g' /usr/lib/os-release
-    sed -i.bak 's/bugs.archlinux.org/bugs.archlinux.com/g' /usr/lib/os-release
+    osReleasePath='/usr/lib/os-release'
+    rm -rf $osReleasePath
+    touch $osReleasePath
+    echo 'NAME="'${OSNAME}'"' >> $osReleasePath
+    echo 'ID=swagarch' >> $osReleasePath
+    echo 'PRETTY_NAME="'${OSNAME}'"' >> $osReleasePath
+    echo 'ANSI_COLOR="0;35"' >> $osReleasePath
+    echo 'HOME_URL="https://swagarch.github.io"' >> $osReleasePath
+    echo 'SUPPORT_URL="https://plus.google.com/u/0/communities/112748817922552005139"' >> $osReleasePath
+    echo 'BUG_REPORT_URL="https://github.com/SwagArch/swagarch-build/issues"' >> $osReleasePath
     cp /usr/lib/os-release /etc/os-release
     arch=`uname -m`
 }
