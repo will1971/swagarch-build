@@ -169,6 +169,8 @@ cups-pk-helper
 gsfonts
 splix
 system-config-printer
+gtk3-print-backends
+
 
 #ExtraTools
 keepassx2
