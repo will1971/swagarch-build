@@ -170,7 +170,7 @@ gsfonts
 splix
 system-config-printer
 gtk3-print-backends
-
+cups-pdf
 
 #ExtraTools
 keepassx2
