@@ -155,6 +155,7 @@ xfce4-datetime-plugin
 xfce4-notifyd
 xfce4-screenshooter
 xfce4-whiskermenu-plugin
+xfce4-pulseaudio-plugin
 gnome-system-monitor
 firefox
 gufw
@@ -183,7 +184,6 @@ plank-theme-arc
 gnome-encfs-manager
 mac-os-lion-cursors
 vibrancy-colors
-xfce4-pulseaudio-plugin
 swagarch-wallpapers
 swagarch-base-skel
 fsearch-git
