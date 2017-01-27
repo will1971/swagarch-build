@@ -99,7 +99,6 @@ gst-plugins-good
 gst-plugins-ugly
 x264
 gstreamer-vaapi
-gstreamer0.10-plugins
 libdvdcss
 gst-libav
 
