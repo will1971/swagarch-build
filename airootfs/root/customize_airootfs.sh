@@ -145,7 +145,7 @@ function renameOSFunc() {
     echo 'HOME_URL="https://swagarch.github.io"' >> $osReleasePath
     echo 'SUPPORT_URL="https://plus.google.com/u/0/communities/112748817922552005139"' >> $osReleasePath
     echo 'BUG_REPORT_URL="https://github.com/SwagArch/swagarch-build/issues"' >> $osReleasePath
-    cp /usr/lib/os-release /etc/os-release
+
     arch=`uname -m`
 }
 
