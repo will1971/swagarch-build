@@ -9,7 +9,7 @@ pacman-key --populate swagarch
 set -e -u
 
 iso_name=swagarch
-iso_label="SWAG_ARCH_$(date +%Y%m)"
+iso_label="SWGARCH$(date +%y%m)"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch
 work_dir=work
