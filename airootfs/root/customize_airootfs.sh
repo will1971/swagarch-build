@@ -163,6 +163,10 @@ function doNotDisturbTheLiveUserFunc() {
     echo '</channel>' >> $pathToPerchannel
 }
 
+function setDConfSettings() {
+    dconf write /net/launchpad/plank/docks/dock1/theme "'Coal'"
+}
+
 
 initFunc
 initkeysFunc
@@ -181,4 +185,5 @@ deleteObsoletePackagesFunc
 setDefaultCursorFunc
 fixWifiFunc
 fixPermissionsFunc
+setDConfSettings
 initkeysFunc
