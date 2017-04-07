@@ -181,7 +181,6 @@ deleteObsoletePackagesFunc
 setDefaultCursorFunc
 fixWifiFunc
 fixPermissionsFunc
-setDConfSettings
 initkeysFunc
 
 dconf update # apply dconf settings
