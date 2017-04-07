@@ -165,6 +165,8 @@ function doNotDisturbTheLiveUserFunc() {
 
 function setDConfSettings() {
     dconf write /net/launchpad/plank/docks/dock1/theme "'Coal'"
+    dconf write /net/launchpad/plank/docks/dock1/dock-items "['Thunar.dockitem', 'keepassx2.dockitem', 'gnome-system-monitor.dockitem', 'firefox.dockitem', 'gimp.dockitem', 'clementine.dockitem', 'vlc.dockitem']"
+
 }
 
 
