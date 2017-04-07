@@ -1,0 +1,10 @@
+# dconf path
+[org/mate/pluma]
+
+# dconf key names and their corresponding values
+color-scheme='monokai-extended'
+display-line-numbers=true
+editor-font='Droid Sans Mono 12'
+insert-spaces=true
+use-default-font=false
+

@@ -163,12 +163,6 @@ function doNotDisturbTheLiveUserFunc() {
     echo '</channel>' >> $pathToPerchannel
 }
 
-function setDConfSettings() {
-    dconf write /net/launchpad/plank/docks/dock1/theme "'Coal'"
-    dconf write /net/launchpad/plank/docks/dock1/dock-items "['Thunar.dockitem', 'keepassx2.dockitem', 'gnome-system-monitor.dockitem', 'firefox.dockitem', 'gimp.dockitem', 'clementine.dockitem', 'vlc.dockitem']"
-
-}
-
 
 initFunc
 initkeysFunc
@@ -189,3 +183,5 @@ fixWifiFunc
 fixPermissionsFunc
 setDConfSettings
 initkeysFunc
+
+dconf update # apply dconf settings
