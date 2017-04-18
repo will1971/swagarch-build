@@ -138,7 +138,6 @@ network-manager-applet
 networkmanager-openvpn
 networkmanager-pptp
 vlc
-clementine
 gimp
 gimp-plugin-gmic
 polkit-gnome
@@ -162,6 +161,13 @@ gufw
 plank
 alacarte
 swagarch-settings-manager
+
+
+#Lollypop Music Player
+lollypop
+youtube-dl
+libsecret
+python-pylast
 
 #Printer-Support
 cups
