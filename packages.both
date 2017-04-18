@@ -165,7 +165,7 @@ swagarch-settings-manager
 
 #Lollypop Music Player
 lollypop
-youtube-dl
+#youtube-dl
 libsecret
 python-pylast
 
