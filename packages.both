@@ -169,6 +169,7 @@ lollypop
 libsecret
 python-pylast
 python-beautifulsoup4
+python-wikipedia
 
 #Printer-Support
 cups
