@@ -1,0 +1,5 @@
+# dconf path
+[org/gnome/Lollypop]
+
+# dconf key names and their corresponding values
+dark-ui=true
