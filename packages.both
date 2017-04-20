@@ -162,14 +162,9 @@ plank
 alacarte
 swagarch-settings-manager
 
-
-#Lollypop Music Player
-lollypop
-#youtube-dl
-libsecret
-python-pylast
-python-beautifulsoup4
-python-wikipedia
+#Rhythmbox Music Player
+rhythmbox
+rhythmbox-plugin-tray-icon
 
 #Printer-Support
 cups

@@ -3,5 +3,5 @@
 
 # dconf key names and their corresponding values
 theme='Coal'
-dock-items=['Thunar.dockitem', 'keepassx2.dockitem', 'gnome-system-monitor.dockitem', 'firefox.dockitem', 'gimp.dockitem', 'org.gnome.Lollypop.dockitem', 'vlc.dockitem']
+dock-items=['Thunar.dockitem', 'keepassx2.dockitem', 'gnome-system-monitor.dockitem', 'firefox.dockitem', 'gimp.dockitem', 'rhythmbox.dockitem', 'vlc.dockitem']
 
