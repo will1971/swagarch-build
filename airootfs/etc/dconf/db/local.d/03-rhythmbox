@@ -1,5 +1,5 @@
 # dconf path
-[org/gnome/rhythmbox/plugins]
+[org/gnome/rhythmbox/rhythmdb]
 
 # dconf key names and their corresponding values
-active-plugins=['mtpdevice', 'dbus-media-server', 'power-manager', 'audioscrobbler', 'tray_icon', 'notification', 'rb', 'mpris', 'artsearch', 'audiocd', 'iradio', 'android', 'mmkeys', 'generic-player']
+monitor-library=true
