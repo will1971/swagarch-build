@@ -192,6 +192,7 @@ swagarch-base-skel
 swagarch-mirrorlist
 fsearch-git
 thunar-shares-plugin-swagarch
+xfpanel-switch
 
 #calamares installer
 python-urllib3
