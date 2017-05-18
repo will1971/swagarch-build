@@ -111,6 +111,7 @@ gucharmap
 gvfs-smb
 gparted
 samba
+xapps
 
 #Lightdm Login Mananger
 lightdm
@@ -133,7 +134,6 @@ gnome-disk-utility
 gnome-keyring
 gvfs-mtp
 light-locker
-pluma
 network-manager-applet
 networkmanager-openvpn
 networkmanager-pptp
@@ -193,6 +193,7 @@ swagarch-mirrorlist
 fsearch-git
 thunar-shares-plugin-swagarch
 xfpanel-switch
+xed
 
 #calamares installer
 python-urllib3
