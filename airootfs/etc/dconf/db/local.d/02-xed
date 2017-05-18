@@ -1,0 +1,20 @@
+# dconf path
+[org/x/editor/preferences/editor]
+
+# dconf key names and their corresponding values
+editor-font='Droid Sans Mono 12'
+display-line-numbers=true
+scheme='monokai-extended'
+syntax-highlighting=true
+use-default-font=false
+
+
+# dconf path
+[org/x/editor/preferences/ui]
+
+# dconf key names and their corresponding values
+side-panel-visible=false
+statusbar-visible=false
+enable-tab-scrolling=true
+bottom-panel-visible=false
+toolbar-visible=true
