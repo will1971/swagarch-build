@@ -84,7 +84,7 @@ xf86-video-ati
 xf86-video-vmware
 xorg-fonts
 xorg-server
-xorg-server-utils
+xorg-server-common
 xorg-xinit
 xorg-xkill
 mesa
