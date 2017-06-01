@@ -126,7 +126,6 @@ virtualbox-guest-utils
 adwaita-icon-theme
 arc-gtk-theme
 cdrkit
-atril
 file-roller
 gamin
 gnome-calculator
@@ -194,6 +193,7 @@ fsearch-git
 thunar-shares-plugin-swagarch
 xfpanel-switch
 xed
+xreader
 
 #calamares installer
 python-urllib3
