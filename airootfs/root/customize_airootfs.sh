@@ -61,6 +61,7 @@ function enableServicesFunc() {
     systemctl enable systemd-networkd.service
     systemctl enable systemd-resolved.service
     systemctl -fq enable NetworkManager
+    systemctl enable reflector.service
     systemctl mask systemd-rfkill@.service
     systemctl set-default graphical.target
 }
