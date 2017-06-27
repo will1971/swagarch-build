@@ -176,7 +176,7 @@ gtk3-print-backends
 cups-pdf
 
 #ExtraTools
-keepassx2
+keepassxc
 redshift-gtk-git
 
 #from Custom-Repo
