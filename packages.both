@@ -137,7 +137,6 @@ light-locker
 network-manager-applet
 networkmanager-openvpn
 networkmanager-pptp
-vlc
 gimp
 gimp-plugin-gmic
 polkit-gnome
@@ -195,6 +194,7 @@ thunar-shares-plugin-swagarch
 xfpanel-switch
 xed
 xreader
+gnome-mpv
 
 #calamares installer
 python-urllib3
