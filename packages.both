@@ -89,6 +89,7 @@ xorg-server
 xorg-server-common
 xorg-xinit
 xorg-xkill
+xorg-xrdb
 mesa
 mesa-libgl
 mesa-vdpau
