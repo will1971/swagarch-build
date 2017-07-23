@@ -96,6 +96,11 @@ function setDefaultCursorFunc() {
     ln -s /usr/share/icons/mac-rainbow-cursor/ /usr/share/icons/Default
 }
 
+function fontFix() {
+    # To disable scaling of bitmap fonts (which often makes them blurry) 
+    rm -rf /etc/fonts/conf.d/10-scale-bitmap-fonts.conf
+}
+
 function deleteObsoletePackagesFunc() {
     # delete obsolete network packages
     pacman -Rns --noconfirm openresolv netctl dhcpcd zsh
@@ -184,6 +189,7 @@ enableCalamaresAutostartFunc
 enableServicesFunc
 deleteObsoletePackagesFunc
 setDefaultCursorFunc
+fontFix
 fixWifiFunc
 fixPermissionsFunc
 initkeysFunc
