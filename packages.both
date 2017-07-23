@@ -73,6 +73,7 @@ ttf-liberation
 ttf-linux-libertine
 ttf-bitstream-vera
 ttf-droid
+ttf-ubuntu-font-family
 
 #X.Org-Server
 xf86-input-synaptics
