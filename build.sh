@@ -221,10 +221,6 @@ make_prepare() {
 make_iso() {
     out_filename="swagarch-$(date +%y%m)_x86_64.iso"
     mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso $out_filename
-    cd ${out_dir}
-    echo "Signing ISO file..."
-    gpg --detach-sign --no-armor $out_filename
-    md5sum $out_filename >> md5sum
     
     echo "finished!"
 }
