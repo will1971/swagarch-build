@@ -1,13 +1,80 @@
-#base-system
-base
-base-devel
-
-#kernel
+#Kernel
+linux
 linux-headers
 linux-firmware
 
-#Grub Bootloader
+#base + devel
+autoconf
+automake
+bash
+binutils
+bison
+coreutils
+cryptsetup
+device-mapper
+diffutils
+e2fsprogs
+fakeroot
+file
+filesystem
+findutils
+flex
+gawk
+gcc
+gcc-libs
+gettext
+glibc
+grep
+groff
+inetutils
+iproute2
+iputils
+jfsutils
+libtool
+less
+licenses
+logrotate
+lvm2
+m4
+make
+man-db
+man-pages
+mdadm
+nano
+netctl
+pacman
+patch
+pciutils
+pcmciautils
+perl
+pkg-config
+procps-ng
+psmisc
+reiserfsprogs
+s-nail
+sed
+shadow
+sudo
+sysfsutils
+systemd-sysvcompat
+texinfo
+usbutils
+util-linux
+which
+xfsprogs
+
+#Archive-Tools
+bzip2
+tar
+unzip
+gzip
+unrar
+xz
+
+#Bootloader
 grub
+efitools
+efibootmgr
 os-prober
 
 #GPG Keys
@@ -30,9 +97,7 @@ dosfstools
 haveged
 ntfs-3g
 btrfs-progs
-efitools
 pkgfile
-sudo
 usb_modeswitch
 fuse-exfat
 wget
@@ -47,17 +112,12 @@ qgnomeplatform-git
 reflector
 
 #Firmware
+alsa-firmware
 b43-fwcutter
 zd1211-firmware
 ipw2100-fw
 ipw2200-fw
 
-#Archive-Tools
-tar
-unzip
-gzip
-unrar
-xz
 
 #Network
 crda
