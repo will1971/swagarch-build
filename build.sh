@@ -65,6 +65,7 @@ make_pacman_conf() {
 
 # Additional packages (airootfs)
 make_packages() {
+    mkdir -p ${work_dir}/${arch}/airootfs
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -p "$(grep -h -v ^# ${script_path}/packages.{both,${arch}})" install
 }
 
