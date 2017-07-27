@@ -101,11 +101,6 @@ function fontFix() {
     rm -rf /etc/fonts/conf.d/10-scale-bitmap-fonts.conf
 }
 
-function deleteObsoletePackagesFunc() {
-    # delete obsolete network packages
-    pacman -Rns --noconfirm openresolv netctl dhcpcd zsh
-}
-
 function configRootUserFunc() {
     usermod -s /usr/bin/bash root
     echo 'export PROMPT_COMMAND=""' >> /root/.bashrc
@@ -187,7 +182,6 @@ setDefaultsFunc
 enableSudoFunc
 enableCalamaresAutostartFunc
 enableServicesFunc
-deleteObsoletePackagesFunc
 setDefaultCursorFunc
 fontFix
 fixWifiFunc
