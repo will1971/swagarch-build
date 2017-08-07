@@ -13,6 +13,7 @@ bash-completion
 bind-tools
 binutils
 bison
+blueman
 btrfs-progs
 bzip2
 calamares
@@ -135,6 +136,7 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+pulseaudio-bluetooth
 python-urllib3
 qgnomeplatform-git
 qt5-styleplugins
