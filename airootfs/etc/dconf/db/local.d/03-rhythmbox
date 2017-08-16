@@ -5,3 +5,4 @@ monitor-library=true
 display-type=1
 horiz-categories=false
 show-source-toolbar=false
+dark-theme=true
