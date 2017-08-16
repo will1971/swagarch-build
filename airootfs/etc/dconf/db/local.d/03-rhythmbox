@@ -1,5 +1,7 @@
-# dconf path
 [org/gnome/rhythmbox/rhythmdb]
-
-# dconf key names and their corresponding values
 monitor-library=true
+
+[org/gnome/rhythmbox/plugins/alternative_toolbar]
+display-type=1
+horiz-categories=false
+show-source-toolbar=false
