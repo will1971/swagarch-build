@@ -145,7 +145,6 @@ reflector
 reiserfsprogs
 rhythmbox
 rhythmbox-plugin-alternative-toolbar-git
-rhythmbox-plugin-tray-icon
 ristretto
 s-nail
 screenfetch
@@ -153,11 +152,7 @@ sed
 shadow
 splix
 sudo
-swagarch-base-skel
-swagarch-keyring
-swagarch-mirrorlist
-swagarch-settings-manager
-swagarch-wallpapers
+swagarch-meta
 sysfsutils
 syslinux
 system-config-printer
@@ -167,7 +162,6 @@ texinfo
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
-thunar-shares-plugin-swagarch
 thunar-volman
 tlp
 ttf-bitstream-vera

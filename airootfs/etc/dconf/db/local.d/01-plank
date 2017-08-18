@@ -1,7 +1,0 @@
-# dconf path
-[net/launchpad/plank/docks/dock1]
-
-# dconf key names and their corresponding values
-theme='Coal'
-dock-items=['Thunar.dockitem', 'keepassxc.dockitem', 'gnome-system-monitor.dockitem', 'firefox.dockitem', 'gimp.dockitem', 'rhythmbox.dockitem', 'io.github.GnomeMpv.dockitem']
-

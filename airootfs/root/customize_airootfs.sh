@@ -70,14 +70,6 @@ function enableServicesFunc() {
     systemctl set-default graphical.target
 }
 
-function enableSudoFunc() {
-    chmod 750 /etc/sudoers.d
-    chmod 440 /etc/sudoers.d/g_wheel
-    chown -R root /etc/sudoers.d
-    chmod -R 755 /etc/sudoers.d
-    echo "Enabled Sudo"
-}
-
 function enableCalamaresAutostartFunc() {
     #Enable Calamares Autostart
     mkdir -p /home/liveuser/.config/autostart
@@ -183,7 +175,6 @@ createLiveUserFunc
 doNotDisturbTheLiveUserFunc
 renameOSFunc
 setDefaultsFunc
-enableSudoFunc
 enableCalamaresAutostartFunc
 enableServicesFunc
 setDefaultCursorFunc
@@ -192,4 +183,3 @@ fixWifiFunc
 fixPermissionsFunc
 initkeysFunc
 upgradeSystem
-dconf update # apply dconf settings

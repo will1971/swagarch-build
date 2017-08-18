@@ -1,8 +1,0 @@
-[org/gnome/rhythmbox/rhythmdb]
-monitor-library=true
-
-[org/gnome/rhythmbox/plugins/alternative_toolbar]
-display-type=1
-horiz-categories=false
-show-source-toolbar=false
-dark-theme=true
