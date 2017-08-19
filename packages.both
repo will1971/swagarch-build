@@ -130,7 +130,6 @@ pcmciautils
 perl
 pkg-config
 pkgfile
-plank
 polkit-gnome
 procps-ng
 psmisc
@@ -142,8 +141,6 @@ qgnomeplatform-git
 qt5-styleplugins
 qt5ct
 reiserfsprogs
-rhythmbox
-rhythmbox-plugin-alternative-toolbar-git
 ristretto
 s-nail
 screenfetch
@@ -186,8 +183,6 @@ wireless_tools
 wpa_actiond
 x264
 xapps
-xdg-user-dirs-gtk
-xed
 xf86-input-synaptics
 xf86-video-ati
 xf86-video-fbdev
