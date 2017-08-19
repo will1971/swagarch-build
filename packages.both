@@ -183,6 +183,7 @@ wireless_tools
 wpa_actiond
 x264
 xapps
+xdg-user-dirs-gtk
 xf86-input-synaptics
 xf86-video-ati
 xf86-video-fbdev
