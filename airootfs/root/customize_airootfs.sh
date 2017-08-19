@@ -65,7 +65,6 @@ function enableServicesFunc() {
     systemctl enable systemd-networkd.service
     systemctl enable systemd-resolved.service
     systemctl -fq enable NetworkManager
-    systemctl enable reflector.service
     systemctl mask systemd-rfkill@.service
     systemctl set-default graphical.target
 }
@@ -130,22 +129,6 @@ function editOrCreateConfigFilesFunc () {
     sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
 }
 
-function renameOSFunc() {
-    #Name SwagArch
-    osReleasePath='/usr/lib/os-release'
-    rm -rf $osReleasePath
-    touch $osReleasePath
-    echo 'NAME="'${OSNAME}'"' >> $osReleasePath
-    echo 'ID=swagarch' >> $osReleasePath
-    echo 'PRETTY_NAME="'${OSNAME}'"' >> $osReleasePath
-    echo 'ANSI_COLOR="0;35"' >> $osReleasePath
-    echo 'HOME_URL="https://swagarch.github.io"' >> $osReleasePath
-    echo 'SUPPORT_URL="https://plus.google.com/u/0/communities/112748817922552005139"' >> $osReleasePath
-    echo 'BUG_REPORT_URL="https://github.com/SwagArch/swagarch-build/issues"' >> $osReleasePath
-
-    arch=`uname -m`
-}
-
 function doNotDisturbTheLiveUserFunc() {
     #delete old config file
     pathToPerchannel="/home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml"
@@ -173,7 +156,6 @@ editOrCreateConfigFilesFunc
 configRootUserFunc
 createLiveUserFunc
 doNotDisturbTheLiveUserFunc
-renameOSFunc
 setDefaultsFunc
 enableCalamaresAutostartFunc
 enableServicesFunc
