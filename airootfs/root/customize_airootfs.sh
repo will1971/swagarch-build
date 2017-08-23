@@ -3,11 +3,6 @@
 USER="liveuser"
 OSNAME="SwagArch"
 
-function initFunc() {
-    set -e -u
-    umask 022
-}
-
 function localeGenFunc() {
     # Set locales
     sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
@@ -144,11 +139,14 @@ function doNotDisturbTheLiveUserFunc() {
 }
 
 function upgradeSystem() {
-    pacman -Syuu --noconfirm
+    pacman -Syu --noconfirm
 }
 
+function umaskFunc() {
+    set -e -u
+    umask 022
+}
 
-initFunc
 initkeysFunc
 localeGenFunc
 setTimeZoneAndClockFunc
@@ -165,3 +163,4 @@ fixWifiFunc
 fixPermissionsFunc
 initkeysFunc
 upgradeSystem
+umaskFunc
