@@ -63,12 +63,13 @@ function enableServicesFunc() {
     systemctl set-default graphical.target
 }
 
-function enableCalamaresAutostartFunc() {
-    #Enable Calamares Autostart
-    mkdir -p /home/liveuser/.config/autostart
-    ln -s /usr/share/applications/calamares.desktop /home/liveuser/.config/autostart/calamares.desktop
-    chmod +rx /home/liveuser/.config/autostart/calamares.desktop
-    chown liveuser /home/liveuser/.config/autostart/calamares.desktop
+function addCalamaresToPlankDockFunc() {
+    dockItem="/home/liveuser/.config/plank/dock1/launchers/Calamares.dockitem"
+
+    echo "[PlankDockItemPreferences]" >> $dockItem
+    echo "Launcher=file:///usr/share/applications/calamares.desktop" >> $dockItem
+
+    chown liveuser $dockItem
 }
 
 function fixWifiFunc() {
@@ -154,7 +155,7 @@ configRootUserFunc
 createLiveUserFunc
 doNotDisturbTheLiveUserFunc
 setDefaultsFunc
-enableCalamaresAutostartFunc
+addCalamaresToPlankDockFunc
 enableServicesFunc
 setDefaultCursorFunc
 fontFix
