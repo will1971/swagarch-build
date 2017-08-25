@@ -51,7 +51,6 @@ function fixPermissionsFunc() {
 }
 
 function enableServicesFunc() {
-    systemctl enable pacman-init.service lightdm.service choose-mirror.service
     systemctl enable org.cups.cupsd.service
     systemctl enable avahi-daemon.service
     systemctl enable vboxservice.service
