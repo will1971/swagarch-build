@@ -31,6 +31,7 @@ dosfstools
 e2fsprogs
 efibootmgr
 encfs
+ethtool
 exfat-utils
 exo
 fakeroot
@@ -146,6 +147,7 @@ s-nail
 screenfetch
 sed
 shadow
+smartmontools
 splix
 sudo
 swagarch-meta
