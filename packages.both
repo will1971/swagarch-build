@@ -186,6 +186,7 @@ wpa_actiond
 x264
 xapps
 xdg-user-dirs-gtk
+x86_energy_perf_policy
 xf86-input-synaptics
 xf86-video-ati
 xf86-video-fbdev
